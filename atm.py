@@ -32,19 +32,20 @@ def atmservices(lock):
                             print("Unsuffecient Balance")
                             break
                         balance=balance-amount
-                        print(f"Your account balance is {balance}")
-                        detail=f"Withdrawed {amount}"
+                        print(f"Your account has been credited by ${amount} , Your account balance is ${balance}")
+                        detail=f"Withdrawed ${amount}"
                         history.append(detail)
                           
             elif choice == 2:
                             amount = float(input("Enter the deposit amount: "))
                             balance=balance+amount
+                            print(f"Your account has been debited by ${amount} , Your account balance is ${balance}")
                             print(f"Your account balance is {balance}")
-                            detail=f"Deposited {amount}"
+                            detail=f"Deposited ${amount}"
                             history.append(detail)
 
             elif choice == 3:
-                        print(f"Your account balance is {balance}")
+                        print(f"Your account balance is ${balance}")
 
             elif choice == 4:
                         print("Your Transaction History is ",history)
